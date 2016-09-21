@@ -1,5 +1,7 @@
 - `安装帮助文档 <https://github.com/tekezo/Karabiner-Elements/blob/master/usage/README.md>`_
 
+- `各个键的名称 <https://github.com/tekezo/Karabiner-Elements/blob/master/src/share/types.hpp#L189-L369>`_
+
 - 配置文件位置：
 
 .. code::
