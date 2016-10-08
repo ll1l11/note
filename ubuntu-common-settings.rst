@@ -8,20 +8,26 @@
  Set Default Editor
 -------------------
 
-    .. code:: bash
+.. code:: bash
 
-        select-editor
+    select-editor
 
 or:
 
-    .. code:: bash
+.. code:: bash
 
-        update-alternatives --config editor
+    update-alternatives --config editor
 
 -----------------------------
  Set Up Time Synchronization
 -----------------------------
 
-    .. code:: bash
+.. code:: bash
 
-        sudo ntpdate cn.pool.ntp.org
+    sudo ntpdate cn.pool.ntp.org
+
+----------------
+sudo no password
+----------------
+
+- `How to run sudo command with no password? <http://askubuntu.com/questions/192050/how-to-run-sudo-command-with-no-password/443071#443071>`_ 
