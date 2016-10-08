@@ -13,3 +13,20 @@
 .. code:: bash
 
     export PIP_REQUIRE_VIRTUALENV=true
+
+
+---------
+pip.conf
+---------
+
+:location: ~/.pip/pip.conf
+
+.. code::
+
+    [global]
+    index-url = https://pypi.doubanio.com/simple
+    trusted-host = pypi.doubanio.com
+
+    ; [install]
+    ; ignore-installed = true
+    ; no-cache-dir = off
