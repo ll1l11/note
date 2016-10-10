@@ -26,6 +26,6 @@ insert custom content
 copy and paste
 --------------
 
-- `http://stackoverflow.com/questions/11489428/how-to-make-vim-paste-from-and-copy-to-systems-clipboard/11489440#11489440 <How to make vim paste from (and copy to) system's clipboard?>`_
+- `How to make vim paste from (and copy to) system's clipboard? <http://stackoverflow.com/questions/11489428/how-to-make-vim-paste-from-and-copy-to-systems-clipboard/11489440#11489440>`_
 
 - `mac ubuntu同步vim粘贴板 <http://www.jianshu.com/p/2436a05e180e>`_
