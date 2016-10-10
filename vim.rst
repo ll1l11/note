@@ -19,3 +19,13 @@ insert custom content
         endfunction
 
         nmap <C-i> :call PyFirstLine()<CR>
+
+
+
+--------------
+copy and paste
+--------------
+
+- `http://stackoverflow.com/questions/11489428/how-to-make-vim-paste-from-and-copy-to-systems-clipboard/11489440#11489440 <How to make vim paste from (and copy to) system's clipboard?>`_
+
+- `mac ubuntu同步vim粘贴板 <http://www.jianshu.com/p/2436a05e180e>`_
