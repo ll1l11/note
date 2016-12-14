@@ -1,7 +1,7 @@
 显示分之名
 ----------
 
-`https://github.com/jimeh/git-aware-prompt`_
+https://github.com/jimeh/git-aware-prompt
 
 使用代理
 
