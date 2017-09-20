@@ -27,7 +27,7 @@ https://git-scm.com/book/en/v2/Git-on-the-Server-Setting-Up-the-Server
 
 设置方式::
 
-    $ cd /srv/git
+    $ cd ~/git-repositories
     $ mkdir project.git
     $ cd project.git
     $ git init --bare
@@ -35,4 +35,4 @@ https://git-scm.com/book/en/v2/Git-on-the-Server-Setting-Up-the-Server
 
 对应的地址::
 
-    git@gitserver:/srv/git/project.git
+    git@gitserver:~/git-repositories/project.git
