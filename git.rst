@@ -17,3 +17,22 @@ https://github.com/jimeh/git-aware-prompt
 
     # call pip only in virtualenv
     export PIP_REQUIRE_VIRTUALENV=true
+    
+    
+git on the server
+------------------
+
+文档:
+https://git-scm.com/book/en/v2/Git-on-the-Server-Setting-Up-the-Server
+
+设置方式::
+
+    $ cd /srv/git
+    $ mkdir project.git
+    $ cd project.git
+    $ git init --bare
+    Initialized empty Git repository in /srv/git/project.git/
+
+对应的地址::
+
+    git@gitserver:/srv/git/project.git
