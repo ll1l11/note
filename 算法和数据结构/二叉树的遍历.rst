@@ -1,0 +1,153 @@
+参考来源
+http://blog.csdn.net/bone_ace/article/details/46718683
+
+代码::
+
+    # -*- coding: utf-8 -*-
+    from collections import deque
+
+
+    class Node(object):
+        def __init__(self, val, left=None, right=None):
+            self.val = val
+            self.left = left
+            self.right = right
+
+
+    class Tree(object):
+        def __init__(self):
+            self.root = None
+            self.node_deque = deque()
+
+        def add(self, val):
+            node = Node(val)
+            if self.root is None:
+                self.root = node
+            else:
+                # 节点还没齐的树
+                parent_node = self.node_deque[0]
+                if parent_node.left is None:
+                    parent_node.left = node
+                else:
+                    parent_node.right = node
+                    # 两个child都不为None的节点，移除队列
+                    self.node_deque.popleft()
+            # 新的节点两个孩子都为None，加入到队列
+            self.node_deque.append(node)
+
+
+    def pre_order(root):
+        """先序遍历"""
+        if root is None:
+            return
+        print(root.val)
+        pre_order(root.left)
+        pre_order(root.right)
+
+
+    def in_order(root):
+        """中序遍历"""
+        if root is None:
+            return
+        in_order(root.left)
+        print(root.val)
+        in_order(root.right)
+
+
+    def post_order(root):
+        """后序遍历"""
+        if root is None:
+            return
+        post_order(root.left)
+        post_order(root.right)
+        print(root.val)
+
+
+    def pre_order_stack(root):
+        """使用栈实现先序遍历"""
+        if root is None:
+            return
+        node_deque = deque()
+        node = root
+
+        while node or node_deque:
+            while node:
+                print(node.val)
+                node_deque.append(node)
+                node = node.left
+            node = node_deque.pop().right
+
+
+    def in_order_stack(root):
+        """使用栈实现中序遍历"""
+        if root is None:
+            return
+        node_deque = deque()
+        node = root
+        while node or node_deque:
+            while node:
+                node_deque.append(node)
+                node = node.left
+            node = node_deque.pop()
+            print(node.val)
+            node = node.right
+
+
+    def post_order_stack(root):
+        """使用栈的后序遍历"""
+        if root is None:
+            return
+        deque1 = deque([root])
+        deque2 = deque()
+        while deque1:
+            node = deque1.pop()
+            if node.left:
+                deque1.append(node.left)
+            if node.right:
+                deque1.append(node.right)
+            deque2.append(node)
+        while deque2:
+            print(deque2.pop().val)
+
+
+    def level_order(root):
+        """层次遍历"""
+        if root is None:
+            return
+
+        node_deque = deque([root])
+        while node_deque:
+            node = node_deque.popleft()
+            print(node.val)
+            if node.left is not None:
+                node_deque.append(node.left)
+            if node.right is not None:
+                node_deque.append(node.right)
+
+
+    if __name__ == '__main__':
+        tree = Tree()
+        for val in range(10):
+            tree.add(val)
+
+        print('先序遍历')
+        pre_order(tree.root)
+
+        print('使用栈实现的先序遍历')
+        pre_order_stack(tree.root)
+
+        print('中序遍历')
+        in_order(tree.root)
+
+        print('栈的中序遍历')
+        in_order_stack(tree.root)
+
+        print('后序遍历')
+        post_order(tree.root)
+
+        print('使用栈的后序遍历')
+        post_order_stack(tree.root)
+
+        print('层次遍历')
+        level_order(tree.root)
+
