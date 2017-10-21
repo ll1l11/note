@@ -1,9 +1,6 @@
 参考:
 `python实现二叉树和它的七种遍历 <http://blog.csdn.net/bone_ace/article/details/46718683>`_
 
-
-http://blog.csdn.net/bone_ace/article/details/46718683
-
 .. figure:: ./tree-traversal.jpg
     :align: center
     :alt: tree traversal
