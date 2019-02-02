@@ -36,3 +36,10 @@ https://git-scm.com/book/en/v2/Git-on-the-Server-Setting-Up-the-Server
 对应的地址::
 
     git@gitserver:~/git-repositories/project.git
+    
+    
+如果配置了GIR_DIR和GIR_WORK_TREE, 如果执行git init --bare则需要(`<https://stackoverflow.com/a/31802682/7403042>`_)::
+
+    env -u GIT_WORK_TREE git init --bare
+
+    
