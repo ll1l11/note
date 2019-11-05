@@ -6,23 +6,23 @@ https://github.com/jimeh/git-aware-prompt
 `zsh下的自动补全 <https://github.com/github/hub/tree/master/etc>`_
 
 使用代理
+----------
 
 .. code-block::
 
-    [http]
-      proxy = socks5://127.0.0.1:1080
-    [https]
-      proxy = socks5://127.0.0.1:1080
+    git config --global http.proxy socks5://127.0.0.1:1080
+    git config --global http.proxy http://127.0.0.1:8888
 
+只是github使用代理
+------------------
 
-只能在virtualenv中安装package, 在.bashrc中添加::
+.. code-block:: sh
 
-    # call pip only in virtualenv
-    export PIP_REQUIRE_VIRTUALENV=true
+    git config --global http.https://github.com.proxy socks5://127.0.0.1:1080
 
 
 git on the server
-------------------
+-------------------
 
 文档:
 https://git-scm.com/book/en/v2/Git-on-the-Server-Setting-Up-the-Server
@@ -37,7 +37,7 @@ https://git-scm.com/book/en/v2/Git-on-the-Server-Setting-Up-the-Server
 
 对应的地址::
 
-    git@gitserver:~/git-repositories/project.git
+    git@gitserver:git-repositories/project.git
 
 
 如果配置了GIR_DIR和GIR_WORK_TREE, 如果执行git init --bare则需要(`<https://stackoverflow.com/a/31802682/7403042>`_)::
